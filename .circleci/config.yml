@@ -26,10 +26,10 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo "hello world" > ~/output.txt
-        - persist_to_workspace:
-            root: ~/
-            paths:
-              - output.txt
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - output.txt
             
   print_output_file:
     docker:
